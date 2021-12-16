@@ -12,13 +12,13 @@ import modelo.Fruta;
 import modelo.Snake;
 
 public class PanelJuego extends JPanel {
-
-	/** Creacion panel Juego*/
-	static List<int []> snakeCopia = new ArrayList<>();
+	
+	private List<int []> snakeCopia = new ArrayList<>();
 	int[] fruta;
 	
+	/** Creacion panel Juego*/
 	public PanelJuego() {
-		this.setBounds(50, 50, 400, 400);
+		setBackground(new Color(32, 178, 170));
 	}
 	
 	public void setDatos(List<int[]> snakeCopia, int[] frutaCopia){

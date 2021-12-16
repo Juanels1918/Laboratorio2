@@ -2,19 +2,19 @@ package modelo;
 
 public class Fruta {
 
-	private static int[] coo = new int[2];
-	static boolean estado;
+	private int[] coo = new int[2];
+	private boolean estado;
 	public Fruta() {
 		setCoo();
 		setEstado(true);
 	}
 
-	public static int[] getCoo() {
-		return coo;
+	public int[] getCoo() {
+		return this.coo;
 	}
 	
-	public static boolean getEstado() {
-		return estado;
+	public boolean getEstado() {
+		return this.estado;
 	}
 	
 	public void setCoo() {

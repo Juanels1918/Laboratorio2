@@ -2,15 +2,18 @@ package vista;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 
 public class FrameInicio extends JFrame {
 
-	private static JPanel panel1;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private JPanel panel1;
 
 	public JButton btnIniciar;
-	public JButton btnPuntajes;
 	
 	/**  Creación Frame principal.*/
 	public FrameInicio() {
@@ -25,7 +28,6 @@ public class FrameInicio extends JFrame {
 		setContentPane(panel1);
 		setResizable(false);
 		panel1.add(btnIniciar());
-		panel1.add(btnPuntajes());
 	}
 	
 	public JButton btnIniciar() {
@@ -37,14 +39,5 @@ public class FrameInicio extends JFrame {
 	public void setbtnIniciar(JButton boton) {
 		this.btnIniciar = boton;
 	}
-	
-	public JButton btnPuntajes() {
-		btnPuntajes = new JButton("Puntajes");
-		btnPuntajes.setBounds(161, 206, 117, 25);
-		return btnPuntajes;
-	}
-	
-	
-	
 	
 }

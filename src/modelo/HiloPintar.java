@@ -9,7 +9,7 @@ public class HiloPintar extends Thread{
 	@Override
 	public void run() {
 		while (estado) {
-			ControladorMapa.vista.Pintar(ControladorMapa.snake.getSnake(), ControladorMapa.frutaModel.getCoo());
+			ControladorMapa.vista.Pintar(ControladorMapa.partida.getObjSnake().getSnake(), ControladorMapa.partida.getObjFruta().getCoo());
 			try {
 				Thread.sleep(250);
 			} catch (Exception e) {

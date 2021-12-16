@@ -8,16 +8,16 @@ public class ControladorTeclas implements KeyListener{
 	  public void keyPressed(KeyEvent e){
 	    switch (e.getKeyCode()){
 	      case KeyEvent.VK_UP:
-	    	  ControladorMapa.cambiarDireccion(4);
+	    	  ControladorMapa.partida.setDireccion(4);
 	        break;
 	      case KeyEvent.VK_DOWN:
-	    	  ControladorMapa.cambiarDireccion(2);
+	    	  ControladorMapa.partida.setDireccion(2);
 	        break;
 	      case KeyEvent.VK_LEFT:
-	    	  ControladorMapa.cambiarDireccion(3);
+	    	  ControladorMapa.partida.setDireccion(3);
 	        break;
 	      case KeyEvent.VK_RIGHT:
-	    	  ControladorMapa.cambiarDireccion(1);
+	    	  ControladorMapa.partida.setDireccion(1);
 	        break;
 
 	    }

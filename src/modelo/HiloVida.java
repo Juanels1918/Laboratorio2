@@ -1,7 +1,5 @@
 package modelo;
 
-import javax.swing.JOptionPane;
-
 import controlador.ControladorMapa;
 
 public class HiloVida extends Thread {
@@ -11,9 +9,8 @@ public class HiloVida extends Thread {
 	@Override
 	public void run() {
 		while (estado) {
-			if(ControladorMapa.snake.vida() == true) {
-				ControladorMapa.detenerHilos();
-				JOptionPane.showMessageDialog(null, "Te moriste :C");
+			if(ControladorMapa.partida.getObjSnake().vida() == true) {
+				ControladorMapa.partida.reiniciar();
 			}
 			try {
 				Thread.sleep(250);

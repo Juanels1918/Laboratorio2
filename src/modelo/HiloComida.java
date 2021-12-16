@@ -11,8 +11,8 @@ public class HiloComida extends Thread{
 		while (estado) {
 			
 			
-			if(ControladorMapa.snake.comer(ControladorMapa.frutaModel.getCoo()) == true) {
-				ControladorMapa.frutaModel.setCoo();
+			if(ControladorMapa.partida.getObjSnake().comer(ControladorMapa.partida.getObjFruta().getCoo()) == true) {
+				ControladorMapa.partida.getObjFruta().setCoo();
 			}
 			try {
 				Thread.sleep(250);
