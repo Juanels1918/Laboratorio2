@@ -2,6 +2,8 @@ package vista;
 
 
 import java.util.ArrayList;
+
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 
@@ -12,6 +14,7 @@ public class FrameMapa extends JFrame {
 	
 	/**  Creación Frame Juego.*/
 	public FrameMapa() {
+		setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.png")).getImage());
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 400, 400);
 		setResizable(false);

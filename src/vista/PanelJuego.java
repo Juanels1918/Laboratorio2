@@ -26,9 +26,13 @@ public class PanelJuego extends JPanel {
 		
         super.paintComponent(g);
         
-        for (int i = 0; i < snakeCopia.size(); i++) {
-        	g.fillRect(snakeCopia.get(i)[0],snakeCopia.get(i)[1],10,10);
-        }
+        try {
+        	for (int i = 0; i < snakeCopia.size(); i++) {
+            	g.fillRect(snakeCopia.get(i)[0],snakeCopia.get(i)[1],10,10);
+            }
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
         
         g.setColor(new Color(255,0,0));
         g.fillRect(fruta[0],fruta[1],11,10); 
