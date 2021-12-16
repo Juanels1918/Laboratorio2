@@ -1,9 +1,8 @@
 package vista;
 
 
-import java.util.List;
+import java.util.ArrayList;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 
 public class FrameMapa extends JFrame {
@@ -23,7 +22,7 @@ public class FrameMapa extends JFrame {
 		setVisible(true);
 	}
 	
-	public void Pintar(List<int[]> list, int[] fruta) {
+	public void Pintar(ArrayList<int[]> list, int[] fruta) {
 		Panel.setDatos(list, fruta);
 		Panel.repaint();
 	}

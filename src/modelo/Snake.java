@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Snake {
 
-	private List<int []> Snake = new ArrayList<>(); //Cuerpo del snake
+	private ArrayList<int []> Snake = new ArrayList<>(); //Cuerpo del snake
 	private int[] cabeza = new int[2];;
 	
 	public Snake() {
@@ -16,11 +16,11 @@ public class Snake {
 		this.Snake.add(cabeza);
 	}
 
-	public List<int[]> getSnake() {
+	public ArrayList<int[]> getSnake() {
 		return this.Snake;
 	}
 
-	public void setSnake(List<int[]> snake) {
+	public void setSnake(ArrayList<int[]> snake) {
 		this.Snake = snake;
 	}
 	

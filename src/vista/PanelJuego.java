@@ -3,17 +3,13 @@ package vista;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.swing.JPanel;
 
-import modelo.Fruta;
-import modelo.Snake;
-
 public class PanelJuego extends JPanel {
 	
-	private List<int []> snakeCopia = new ArrayList<>();
+	private ArrayList<int []> snakeCopia = new ArrayList<>();
 	int[] fruta;
 	
 	/** Creacion panel Juego*/
@@ -21,7 +17,7 @@ public class PanelJuego extends JPanel {
 		setBackground(new Color(32, 178, 170));
 	}
 	
-	public void setDatos(List<int[]> snakeCopia, int[] frutaCopia){
+	public void setDatos(ArrayList<int[]> snakeCopia, int[] frutaCopia){
 		this.snakeCopia = snakeCopia;
 		this.fruta = frutaCopia;
 	}
