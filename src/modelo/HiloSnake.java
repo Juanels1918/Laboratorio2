@@ -9,7 +9,9 @@ public class HiloSnake  extends Thread{
 	@Override
 	public void run() {
 		while (estado) {
-			ControladorMapa.partida.getObjSnake().avanzar(ControladorMapa.partida.getDireccion());
+			if(ControladorMapa.partida.getObjSnake().avanzar(ControladorMapa.partida.getDireccion()) == true) {
+				ControladorMapa.partida.reiniciar();
+			}
 			try { 
 				Thread.sleep(250);
 			} catch (Exception e) {

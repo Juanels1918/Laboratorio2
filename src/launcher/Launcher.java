@@ -5,7 +5,6 @@ import vista.FrameInicio;
 
 public class Launcher {
 
-	
 	public static void main(String[] args) {
 		try {
 			FrameInicio m = new FrameInicio();

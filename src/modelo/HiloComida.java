@@ -9,8 +9,6 @@ public class HiloComida extends Thread{
 	@Override
 	public void run() {
 		while (estado) {
-			
-			
 			if(ControladorMapa.partida.getObjSnake().comer(ControladorMapa.partida.getObjFruta().getCoo()) == true) {
 				ControladorMapa.partida.getObjFruta().setCoo();
 			}

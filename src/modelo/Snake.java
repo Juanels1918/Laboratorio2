@@ -21,7 +21,7 @@ public class Snake {
 		this.Snake = snake;
 	}
 	
-	public void avanzar(int i) {
+	public boolean  avanzar(int i) {
 		int[] ultimo = this.Snake.get(this.Snake.size()-1);
 		int avX = 0;
 		int avY = 0;
@@ -32,22 +32,21 @@ public class Snake {
 		case 2 -> avY+=10; //Bajar
 		case 4 -> avY-=10; //Subir
 		}
+		
 		int[] nuevo = {Math.floorMod(ultimo[0]+avX, 400),Math.floorMod(ultimo[1]+avY, 300)};
-		this.Snake.add(nuevo);
-		this.cabeza = nuevo;
-		this.Snake.remove(0);
-	}
-	
-	public boolean vida() {
+		
 		boolean muerte = false;
 		if (this.Snake.size()>1) {
 			for (int j = 0; j < this.Snake.size()-1; j++) { //Recorre el tamaño de la serpiente por cada espacio que avance
-				if (this.cabeza[0] == this.Snake.get(j)[0] && cabeza[1] == this.Snake.get(j)[1]) {
+				if (nuevo[0] == this.Snake.get(j)[0] && nuevo[1] == this.Snake.get(j)[1]) {
 					muerte = true;
-					break;
+					return muerte;
 				}
 			}
 		}
+		
+		this.Snake.add(nuevo);
+		this.Snake.remove(0);
 		return muerte;
 	}
 	

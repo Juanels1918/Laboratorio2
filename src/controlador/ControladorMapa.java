@@ -6,7 +6,6 @@ import java.awt.event.KeyListener;
 import modelo.HiloComida;
 import modelo.HiloPintar;
 import modelo.HiloSnake;
-import modelo.HiloVida;
 import modelo.Partida;
 
 public class ControladorMapa {
@@ -18,8 +17,6 @@ public class ControladorMapa {
 	static HiloComida hc;
 	static HiloSnake hs;
 	static HiloPintar hp;
-	static HiloVida hv;
-	
 	
 	public ControladorMapa(FrameMapa vista, Partida partida, ControladorTeclas ct) {
 		
@@ -29,15 +26,13 @@ public class ControladorMapa {
 		hs = new HiloSnake();
 		hc = new HiloComida();
 		hp = new HiloPintar();
-		hv = new HiloVida();
-		hs.start();hp.start();hc.start();hv.start();
-	}
+		hs.start();hp.start();hc.start();	
+		}
 	
 	static public void detenerHilos() {
 		hs.detenerHilo();
 		hp.detenerHilo();
 		hc.detenerHilo();
-		hv.detenerHilo();
 	}
 	
 }
