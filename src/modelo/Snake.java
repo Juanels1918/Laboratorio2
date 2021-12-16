@@ -6,10 +6,13 @@ import java.util.List;
 public class Snake {
 
 	private List<int []> Snake = new ArrayList<>(); //Cuerpo del snake
-	private int[] cabeza;
+	private int[] cabeza = new int[2];;
 	
 	public Snake() {
-		this.cabeza = new int[]{50,50};
+		this.cabeza[0] = (int) (Math.random()*300);
+		this.cabeza[0] -= (this.cabeza[0] %10); 
+		this.cabeza[1] = (int) (Math.random()*300);
+		this.cabeza[1] -= (this.cabeza[1] %10); 
 		this.Snake.add(cabeza);
 	}
 

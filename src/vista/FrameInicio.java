@@ -2,14 +2,12 @@ package vista;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import java.awt.Color;
+
 import javax.swing.JButton;
 
 public class FrameInicio extends JFrame {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 
 	private JPanel panel1;
 
@@ -17,6 +15,7 @@ public class FrameInicio extends JFrame {
 	
 	/**  Creación Frame principal.*/
 	public FrameInicio() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		panel1 = new JPanel();
@@ -27,6 +26,7 @@ public class FrameInicio extends JFrame {
 		setLocationRelativeTo(null);
 		setContentPane(panel1);
 		setResizable(false);
+		panel1.setBackground(new Color(32, 178, 170));
 		panel1.add(btnIniciar());
 	}
 	
